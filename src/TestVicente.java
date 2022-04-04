@@ -70,8 +70,27 @@ public class TestVicente {
     }
     
     /*
-     *   Metodo que indique si una cadena es palindromo o no lo es(un palindromo es la palabra que se lee igual de derecha aizquierda)
+     *   Metodo que indique si una cadena es palindromo o no lo es(un palindromo
+     * es la palabra que se lee igual de derecha aizquierda)
     */
+    
+    private static void EsPalindromo(String cadena){
+        char array[] = cadena.toCharArray();
+        char array1[] = new char [array.length];
+        int aux = array.length-1;
+        
+        for (int i = 0; i < array.length; i++) {
+            array1[aux] = array[i];
+            aux--;
+        }
+        String cadena1 = String.valueOf(array1);
+        System.out.println("");
+        if (cadena.equalsIgnoreCase(cadena1)) {
+            System.out.println(cadena + " Es palindromo.");
+        }else{
+            System.out.println(cadena + " No es palindromo.");
+        }
+    }
     
     public static void main(String[] args){
         int arreglo[] = {15,212,36,0,551,81,41,121,12315,0};
@@ -90,6 +109,9 @@ public class TestVicente {
         EsPerfecto(296);
         EsPerfecto(2980);
         EsPerfecto(8128);
+        
+        EsPalindromo("bienvenido");
+        EsPalindromo("reconoCer");
         
     }
 }
