@@ -69,6 +69,10 @@ public class TestVicente {
         }
     }
     
+    /*
+     *   Metodo que indique si una cadena es palindromo o no lo es(un palindromo es la palabra que se lee igual de derecha aizquierda)
+    */
+    
     public static void main(String[] args){
         int arreglo[] = {15,212,36,0,551,81,41,121,12315,0};
         int arreglo1[] = {0,0,0,0};
