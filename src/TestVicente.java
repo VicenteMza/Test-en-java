@@ -44,6 +44,21 @@ public class TestVicente {
         return forma;
     }
     
+    
+    /*
+     *   Metodo que indique si un numero es perfecto, un numero es perfecto si
+     * la suma de sus divisores(sin contarse el mismo numero) es le mismo numero
+     * ej 6 es perfecto por que 3+2+1= 6.
+    */
+    
+    private static void EsPerfecto(int numero){
+        if (numero %2 == 0) {
+            System.out.println("es par");
+        }else{
+            System.out.println(numero + " No es perfecto");
+        }
+    }
+    
     public static void main(String[] args){
         int arreglo[] = {15,212,36,0,551,81,41,121,12315,0};
         int arreglo1[] = {0,0,0,0};
@@ -56,5 +71,9 @@ public class TestVicente {
         System.out.println("");
         System.out.println("");
         System.out.println(VerificarArreglo(arreglo1));
+        System.out.println("");
+        EsPerfecto(5);
+        
+        
     }
 }
