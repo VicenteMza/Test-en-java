@@ -52,8 +52,18 @@ public class TestVicente {
     */
     
     private static void EsPerfecto(int numero){
+        int aux = 0;
         if (numero %2 == 0) {
-            System.out.println("es par");
+            for (int i = 1; i < numero; i++) {
+                if (numero%i == 0) {
+                    aux += i;
+                }
+            }
+            if (numero == aux) {
+                System.out.println(numero + " Es un numero perfecto");
+            }else{
+                System.out.println(numero + " No es perfecto");
+            }
         }else{
             System.out.println(numero + " No es perfecto");
         }
@@ -72,8 +82,10 @@ public class TestVicente {
         System.out.println("");
         System.out.println(VerificarArreglo(arreglo1));
         System.out.println("");
-        EsPerfecto(5);
-        
+        EsPerfecto(28);
+        EsPerfecto(296);
+        EsPerfecto(2980);
+        EsPerfecto(8128);
         
     }
 }
